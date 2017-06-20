@@ -55,9 +55,6 @@ htpasswd.users file that is specified by your apache configuration.
     
 These will be required in order for V-Shell to run correctly.
 
-For problems or support, use the V-Shell forum at the following address:
-http://support.nagios.com/forum/viewforum.php?f=19
-
 
 Getting Started
 ---------------
