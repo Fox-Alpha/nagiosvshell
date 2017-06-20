@@ -22,37 +22,37 @@ To install V-Shell, complete the following steps with root permissions:
 
 1. Change to the temp directory, and download the latest V-Shell tarball:
 
-
-    cd /tmp
-    wget http://assets.nagios.com/downloads/exchange/nagiosvshell/vshell.tar.gz
-
+```
+cd /tmp
+wget http://assets.nagios.com/downloads/exchange/nagiosvshell/vshell.tar.gz
+```
     
 2. Unzip V-Shell tarball:
 
-
-    tar xzf vshell.tar.gz
-
+```
+tar xzf vshell.tar.gz
+```
  
 3. Change to the newly made directory:
     
-    
-    cd /vshell
-
+```    
+cd  /vshell
+```
   
 4. Verify the values in `config.php` are correct. Sensible defaults are included for RHEL/CentOS 6/7 and Debian 7, and should require no action.
 
 5. Once the configuration values are verified, add execute permissions and run the install script:
 
-
-    chmod +x install.php
-    ./install.php
-
+```
+chmod +x install.php
+./install.php
+```
 
 6. Copy the configured `vshell` directory to the directory your Apache server is configured to serve from (for this example, we will use the default directory for CentOS 6/7):
 
-
-    cp -R /tmp/vshell /var/www/html/
-
+```
+cp -R /tmp/vshell /var/www/html/
+```
     
 7. To access your V-Shell interface, navigate to `<vshell_server_ip>/vshell`    
     
