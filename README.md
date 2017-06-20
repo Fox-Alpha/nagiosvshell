@@ -9,9 +9,9 @@ I'm no good at writing sample / filler text, so go write something yourself.
 
 Prerequisites:  
 -------------
-*Apache
-*PHP 5.x
-*PHP-CLI
+* Apache
+* PHP 5.x
+* PHP-CLI
 V-Shell requires apache and php 5.x already installed in the system, as well as
 php-cli if it's not already there. 
 
@@ -98,11 +98,11 @@ at any time by selecting the "Refresh Data" link at the top right of the page.
 Authors
 -------
 
-  Chris Laskey
-  Josh Soref
-  JAHunter
-  Scott Wilkerson
-  Mike Guthrie
+* Chris Laskey
+* Josh Soref
+* JAHunter
+* Scott Wilkerson
+* Mike Guthrie
 
 
 Current Version
