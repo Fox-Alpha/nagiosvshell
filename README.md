@@ -36,7 +36,7 @@ tar xzf vshell.tar.gz
 3. Change to the newly made directory:
     
 ```    
-cd  /vshell
+cd  vshell
 ```
   
 4. Verify the values in `config.php` are correct. Sensible defaults are included for RHEL/CentOS 6/7 and Debian 7, and should require no action.
