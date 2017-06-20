@@ -4,7 +4,6 @@
 The Nagios V-Shell is a web interface written in PHP that is designed to render
 as valid XHTML and be fully styled and formatted using CSS classes, while 
 maintaining the power of Nagios Core for issuing system and node commands. 
-I'm no good at writing sample / filler text, so go write something yourself.
 
 
 Prerequisites:  
