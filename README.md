@@ -9,6 +9,9 @@ I'm no good at writing sample / filler text, so go write something yourself.
 
 Prerequisites:  
 -------------
+*Apache
+*PHP 5.x
+*PHP-CLI
 V-Shell requires apache and php 5.x already installed in the system, as well as
 php-cli if it's not already there. 
 
@@ -22,16 +25,19 @@ To install V-Shell, complete the following steps with root permissions:
 
     cd /tmp
     wget http://assets.nagios.com/downloads/exchange/nagiosvshell/vshell.tar.gz
+
     
 2. Unzip V-Shell tarball:
 
 
     tar xzf vshell.tar.gz
+
  
 3. Change to the newly made directory:
     
     
     cd /vshell
+
   
 4. Verify the values in `config.php` are correct. Sensible defaults are included for RHEL/CentOS 6/7 and Debian 7, and should require no action.
 
@@ -41,10 +47,12 @@ To install V-Shell, complete the following steps with root permissions:
     chmod +x install.php
     ./install.php
 
+
 6. Copy the configured `vshell` directory to the directory your Apache server is configured to serve from (for this example, we will use the default directory for CentOS 6/7):
 
 
     cp -R /tmp/vshell /var/www/html/
+
     
 7. To access your V-Shell interface, navigate to `<vshell_server_ip>/vshell`    
     
@@ -90,11 +98,11 @@ at any time by selecting the "Refresh Data" link at the top right of the page.
 Authors
 -------
 
-Chris Laskey
-Josh Soref
-JAHunter
-Scott Wilkerson
-Mike Guthrie
+  Chris Laskey
+  Josh Soref
+  JAHunter
+  Scott Wilkerson
+  Mike Guthrie
 
 
 Current Version
