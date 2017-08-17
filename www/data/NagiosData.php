@@ -95,7 +95,6 @@ class NagiosData
 						
 		if (isset($this->properties[$var]))			
 			$retval = $this->properties[$var];
-
 		return $retval;
 	}
 
@@ -140,8 +139,9 @@ class NagiosData
 			/* serviceID index no longer exists, had to call array by index 
 			 * number instead 
 			 */
-			$id = str_replace('service', '', $arg); 
-			$retval = $details[$id];	//call service details by array index 
+			$id = str_replace('service', '', $arg);
+			$retval = $details[$id];
+
 	
 		}
 		if ($type == 'host')	{
@@ -238,9 +238,22 @@ class NagiosData
 		//grab perms if they need to be updated 
 		if(!$perms_are_cached)	{
 			$this->properties['permissions'] = parse_perms_file();
-         if($apc_exists)
-            $this->set_data_to_apc('permissions');
-		}		
+			if($apc_exists)
+            			$this->set_data_to_apc('permissions');
+		}
+
+		$service_lookup = array();
+		foreach ($this->properties['services_objs'] as $key => $value) {
+			if (empty($value['display_name']))
+				$value['display_name'] = $value['service_description'];
+			$service_lookup[$value['service_description']] = $value;
+		}
+	
+		foreach ($this->properties['services'] as $key => $value) {
+			$value['obj'] = $service_lookup[$value['service_description']];
+			$this->properties['services'][$key] = $value;
+		}
+
 	}//end raw_file_parse() 
 	
 	private function use_apc_data() {

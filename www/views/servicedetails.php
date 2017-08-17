@@ -59,7 +59,7 @@ function get_service_details($dets)
 	<h3>".gettext('Service Status Detail')."</h3>
 	<div class='detailWrapper'>
 	
-	<h4><em>".gettext('Service').": </em>{$dets['Service']}</h4>
+	<h4><em>".gettext('Service').": </em>{$dets['DisplayName']}</h4>
 	<h4><em>".gettext('Host').": </em><a href='index.php?type=hostdetail&name_filter={$dets['Host']}' title='".gettext('Host Details')."'>{$dets['Host']}</a></h4>
 	<h5><em>".gettext('Member of').": </em>{$dets['MemberOf']}</h5>
 	<h6><em><a href='index.php?type=services&host_filter={$dets['Host']}' title='".gettext('See All Services For This Host')."'>".gettext('See All Services For This Host')."</a></h6>
@@ -88,7 +88,7 @@ function get_service_details($dets)
 		<tr><td>".gettext('Execution Time')."</td><td>{$dets['ExecutionTime']}</td></tr>
 		<tr><td>".gettext('State Change')."</td><td>{$dets['StateChange']}</td></tr>
 		<tr><td>".gettext('Performance Data')."</td><td><div class='td_maxwidth'>{$dets['PerformanceData']}</div></td></tr>
-		
+		<tr><td>".gettext('Notes URL')."</td><td><div class='td_maxwidth'><a href='{$dets['NotesUrl']}'>{$dets['NotesUrl']}</a></div></td></tr>		
 	</table>	
 	
 	</fieldset>
