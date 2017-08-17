@@ -83,11 +83,11 @@ function process_service_detail($serviceid)
 	//core commands
 	//$cmd_map = CORECGI.'statusmap.cgi?host='.$hostname.'&service='.$ser_desc;
 	$core_link = CORECGI.'extinfo.cgi?type=2&host='.$hostname.'&service='.$ser_desc;
-	
-											
+												
 	//service details array -> Use for displaying page 
 	$details = array( 
 					'Service' => $sd['service_description'],
+					'DisplayName' => $sd['obj']['display_name'],
 					'Host'	  => $hostname,
 					'Output'  => $sd['plugin_output'],
 					'LongOutput'  => $sd['long_plugin_output'],
@@ -124,6 +124,7 @@ function process_service_detail($serviceid)
 					'CmdScheduleChecks'		=> htmlentities($cmd_schedule_checks),
 					'AckTitle'				=> $ack_title,
 					'CoreLink'			    => htmlentities($core_link),
+                                        'NotesUrl' => $sd['obj']['notes_url']
 					);
 								
 	return $details;
